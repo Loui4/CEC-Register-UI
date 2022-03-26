@@ -1,3 +1,4 @@
+import { useFormFieldContext } from "../../../hooks";
 import { FormOption } from "../../../interfaces";
 import Label from "../../atoms/form-label/label";
 import BaseFormSelect from "../../atoms/form-select/BaseFormSelect";
@@ -14,15 +15,8 @@ type PropTypes = {
   label: string;
 };
 
-export default function ({
-  id,
-  value,
-  name,
-  options,
-  hasError,
-  errorMessage,
-  label,
-}: PropTypes) {
+export default function ({ id, name, options, label }: PropTypes) {
+  const { error, handleChange, value } = useFormFieldContext(name);
   return (
     <FormFieldWrapper>
       <Label htmlFor={id} title={label} />
@@ -31,9 +25,10 @@ export default function ({
         name={name}
         options={options}
         value={value}
-        hasError={hasError}
+        hasError={error}
+        onChange={handleChange}
       />
-      {errorMessage ? <ErrorText text={errorMessage} /> : null}
+      {error ? <ErrorText text={error} /> : null}
     </FormFieldWrapper>
   );
 }

@@ -7,6 +7,7 @@ type PropTypes = {
   name: string;
   value: string | number;
   id: string;
+  onChange: (e: any) => void;
 };
 
 const BaseFormSelect: FC<PropTypes> = ({
@@ -15,10 +16,12 @@ const BaseFormSelect: FC<PropTypes> = ({
   value,
   name,
   id,
+  onChange,
 }) => {
   return (
     <select
       id={id}
+      onChange={onChange}
       value={value}
       name={name}
       className={`form-select rounded focus:outline-none w-full ${
