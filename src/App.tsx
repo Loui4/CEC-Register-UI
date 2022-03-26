@@ -10,9 +10,10 @@ import {
 } from "./components/molecules/form";
 import { DataGrid, GridRowsProp, GridColDef } from "@mui/x-data-grid";
 import { BaseTable } from "./components/organisms";
+import { MemberCreateForm } from "./containers/members";
 
 function App() {
-  return null;
+  return <MemberCreateForm />;
 }
 
 export default App;

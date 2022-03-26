@@ -7,11 +7,8 @@ import ErrorText from "../../atoms/texts/ErrorText";
 
 type PropTypes = {
   id: string;
-  value: string | number;
   name: string;
-  hasError?: boolean;
   options: FormOption[];
-  errorMessage?: string;
   label: string;
 };
 

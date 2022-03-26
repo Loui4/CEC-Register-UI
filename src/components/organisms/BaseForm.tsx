@@ -37,3 +37,5 @@ const BaseForm: FC<PropsTypes> = ({
     </Formik>
   );
 };
+
+export default BaseForm;
