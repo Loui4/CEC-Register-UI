@@ -29,7 +29,9 @@ const BaseFormSelect: FC<PropTypes> = ({
       }`}
     >
       {options.map((option) => (
-        <option value={option.value}>{option.label}</option>
+        <option value={option.value} key={option.value}>
+          {option.label}
+        </option>
       ))}
     </select>
   );
