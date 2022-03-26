@@ -12,13 +12,13 @@ import { DataGrid, GridRowsProp, GridColDef } from "@mui/x-data-grid";
 import { BaseTable } from "./components/organisms";
 import { MemberCreateForm } from "./containers/members";
 import { YearCreateForm } from "./containers/year";
-import { ChurchCreateForm } from "./containers/churches";
+import { ChurchCreateForm, ChurchList } from "./containers/churches";
 import { BibleClassCreateForm } from "./containers/bible-class";
 
 function App() {
   return (
     <div className="px-96">
-      <BibleClassCreateForm />
+      <ChurchList />
     </div>
   );
 }

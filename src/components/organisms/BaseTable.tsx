@@ -8,7 +8,7 @@ type IProps = {
 function BaseTable({ columns, rows }: IProps) {
   return (
     <div style={{ height: 300, width: "100%" }}>
-      <DataGrid rows={rows} columns={columns} />
+      <DataGrid rows={rows} columns={columns} disableSelectionOnClick />
     </div>
   );
 }
