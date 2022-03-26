@@ -9,6 +9,7 @@ import {
   FormSelectWithLabel,
 } from "./components/molecules/form";
 import { DataGrid, GridRowsProp, GridColDef } from "@mui/x-data-grid";
+import { BaseTable } from "./components/organisms";
 
 const rows: GridRowsProp = [
   { id: 1, col1: "Hello", col2: "World" },
@@ -36,11 +37,7 @@ const columns: GridColDef[] = [
 ];
 
 function App() {
-  return (
-    <div style={{ height: 300, width: "100%" }}>
-      <DataGrid rows={rows} columns={columns} />
-    </div>
-  );
+  return <BaseTable columns={columns} rows={rows} />;
 }
 
 export default App;
