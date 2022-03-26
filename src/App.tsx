@@ -13,7 +13,11 @@ import { BaseTable } from "./components/organisms";
 import { MemberCreateForm } from "./containers/members";
 
 function App() {
-  return <MemberCreateForm />;
+  return (
+    <div className="px-96">
+      <MemberCreateForm />;
+    </div>
+  );
 }
 
 export default App;

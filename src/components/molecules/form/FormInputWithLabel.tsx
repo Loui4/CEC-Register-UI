@@ -8,15 +8,17 @@ type PropTypes = {
   id: string;
   label: string;
   name: string;
+  type?: "date" | "text";
 };
 
-export default function ({ id, label, name }: PropTypes) {
+export default function ({ id, label, name, type }: PropTypes) {
   const { error, handleChange, value } = useFormFieldContext(name);
   return (
     <FormFieldWrapper>
       <Label htmlFor={id} title={label} />
       <BaseFormInput
         name={name}
+        type={type}
         value={value}
         hasError={error}
         onChange={handleChange}

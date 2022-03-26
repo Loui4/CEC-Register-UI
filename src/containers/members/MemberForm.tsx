@@ -18,7 +18,7 @@ function MemberForm({ initialValues, onSubmit }: PropTypes) {
     firstName: Yup.string().required(FIELD_REQUIRED).label("First Name"),
     lastName: Yup.string().required(FIELD_REQUIRED).label("Last Name"),
     dateOfBirth: Yup.date().required(FIELD_REQUIRED).label("Date Of Birth"),
-    gender: Yup.date().required(FIELD_REQUIRED).label("Gender"),
+    gender: Yup.string().required(FIELD_REQUIRED).label("Gender"),
     email: Yup.string().email().label("Email"),
     phoneNumber: Yup.string().label("Phone Number"),
   });
@@ -31,6 +31,12 @@ function MemberForm({ initialValues, onSubmit }: PropTypes) {
     >
       <FormInputWithLabel id="firstName" label="First Name" name="firstName" />
       <FormInputWithLabel id="lastName" label="Last Name" name="lastName" />
+      <FormInputWithLabel
+        id="dateOfBirth"
+        label="Date Of Birth"
+        name="dateOfBirth"
+        type="date"
+      />
       <FormSelectWithLabel
         options={FormOptions.gender}
         id="gender"
