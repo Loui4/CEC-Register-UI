@@ -11,11 +11,12 @@ import {
 import { DataGrid, GridRowsProp, GridColDef } from "@mui/x-data-grid";
 import { BaseTable } from "./components/organisms";
 import { MemberCreateForm } from "./containers/members";
+import { YearCreateForm } from "./containers/year";
 
 function App() {
   return (
     <div className="px-96">
-      <MemberCreateForm />;
+      <YearCreateForm />
     </div>
   );
 }
