@@ -1,6 +1,6 @@
 import { GridColDef } from "@mui/x-data-grid";
 import { BaseButton } from "../../components/atoms";
-import { BaseTable } from "../../components/organisms";
+import { BaseTable, TableOptions } from "../../components/organisms";
 
 export default function ChurchList() {
   const columns: GridColDef[] = [
@@ -11,10 +11,10 @@ export default function ChurchList() {
       width: 200,
       renderCell: (cellValues) => {
         return (
-          <BaseButton
-            title="something"
-            onClick={() => console.log(cellValues)}
-            color="primary"
+          <TableOptions
+            onClickDelete={() => {}}
+            onClickEdit={() => {}}
+            onClickView={() => {}}
           />
         );
       },

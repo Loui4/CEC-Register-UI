@@ -1,20 +1,26 @@
 import { FC } from "react";
 
 type PropTypes = {
-  title: string;
   onClick?: () => void;
   color: "primary" | "secondary";
   type?: "submit" | "reset";
+  className?: string;
 };
 
-const BaseButton: FC<PropTypes> = ({ title, onClick, color, type }) => {
+const BaseButton: FC<PropTypes> = ({
+  onClick,
+  color,
+  type,
+  children,
+  className,
+}) => {
   return (
     <button
-      className={`bg-primary py-2 px-4 uppercase text-btnText-primary`}
+      className={`bg-${color} py-2 px-4 uppercase ${className}`}
       onClick={onClick}
       type={type}
     >
-      {title}
+      {children}
     </button>
   );
 };

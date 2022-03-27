@@ -26,11 +26,9 @@ const BaseForm: FC<PropsTypes> = ({
         return (
           <form onSubmit={handleSubmit}>
             {children}
-            <BaseButton
-              type="submit"
-              title={isSubmitting ? "submitting..." : "submit"}
-              color="primary"
-            />
+            <BaseButton type="submit" color="primary">
+              {isSubmitting ? "submitting..." : "submit"}
+            </BaseButton>
           </form>
         );
       }}
